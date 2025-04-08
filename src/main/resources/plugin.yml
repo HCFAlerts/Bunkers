@@ -1,0 +1,30 @@
+name: Bunkers
+version: '${project.version}'
+author: Traduciendo
+main: me.traduciendo.bunkers.Bunkers
+description: The Bunkers Core
+website: dsc.gg/liteclubdevelopment
+softdepend:
+  - HolographicDisplays
+  - LunarClient-API
+  - CheatBreakerAPI
+  - Apollo-Bukkit
+commands:
+  bunkers:
+    aliases:
+      - bunkersplugin
+      - bunkerscore
+      - hcfbunkers
+  arena:
+    aliases:
+      - arenas
+  match:
+    aliases:
+      - game
+  faction:
+    aliases:
+      - team
+      - t
+      - f
+      - sq
+      - squad

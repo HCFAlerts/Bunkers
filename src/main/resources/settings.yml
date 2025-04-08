@@ -1,0 +1,35 @@
+LOBBY:
+  SPAWN: 0.4880563105692336, 73.0, 0.41680575047837, 357.18567, 0.15060571
+
+ITEMS:
+  LOBBY:
+    PLAY:
+      DISPLAY_NAME: "&aPlay"
+      ITEM: "NETHER_STAR"
+      DATA: 0
+      SLOT: 4
+      LORE:
+        - "&eClick to join a match"
+  MATCH:
+    TEAM_SELECTOR:
+      DISPLAY_NAME: "&aTeam Selector"
+      ITEM: "BOOK"
+      DATA: 0
+      SLOT: 0
+      LORE:
+        - "&eClick to join a team"
+    LEAVE:
+      DISPLAY_NAME: "&cLeave"
+      ITEM: "INK_SACK"
+      DATA: 1
+      SLOT: 8
+      LORE:
+        - "&eClick to leave"
+  SPECTATOR:
+    TELEPORTER:
+      DISPLAY_NAME: "&cTeleport"
+      ITEM: "COMPASS"
+      DATA: 0
+      SLOT: 4
+      LORE:
+        - "&eClick to open the teleport menu"

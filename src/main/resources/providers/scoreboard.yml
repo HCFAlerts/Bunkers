@@ -1,0 +1,61 @@
+# Coming soon...
+
+TITLES:
+  LOBBY: "&b&lBunkers"
+  WAITING: "&b&lBunkers"
+  FIGHTING: "&b&lBunkers"
+  SPECTATING: "&b&lBunkers"
+
+LOBBY:
+  - "&7&m-------------------------"
+  - "&fIn Lobby: &b%online%"
+  - ""
+  - "&bUnRanked"
+  - " &fWaiting: &b%unranked_waiting%"
+  - " &fPlaying: &b%unranked_playing%"
+  - ""
+  - "&bRanked"
+  - " &fWaiting: &b%ranked_waiting%"
+  - " &fPlaying: &b%ranked_playing%"
+  - ""
+  - "&bliteclub.dev"
+  - "&7&m-------------------------"
+
+WAITING:
+  - "&7&m-------------------------"
+  - "&bGame State:"
+  - " &fPre-Game"
+  - ""
+  - "&bStatus:"
+  - " &fStarts in &b%start_time%s"
+  - ""
+  - "&fTeam: &r%team_color%%team_name%"
+  - "&fPlayers: &b%players%&f/&b20"
+  - ""
+  - "&bliteclub.dev"
+  - "&7&m-------------------------"
+
+FIGHTING:
+  - "&7&m-------------------------"
+  - "&fGame Time: &b%game_time%"
+  - "&fKoTH: &b%koth_time%"
+  - ""
+  - "&fTeam: &r%team_color%%team_name%"
+  - "&fDTR: &b%dtr%"
+  - ""
+  - "%home%"
+  - "&fKills: &b%kills%"
+  - "&fBalance: &b$%balance%"
+  - ""
+  - "&bliteclub.dev"
+  - "&7&m-------------------------"
+
+HOME: "&fHome: &b%home_timer%"
+
+SPECTATING:
+  - "&7&m-------------------------"
+  - "&fGame Time: &b%game_time%"
+  - "&fKoTH: &b%koth_time%"
+  - ""
+  - "&bliteclub.dev"
+  - "&7&m-------------------------"

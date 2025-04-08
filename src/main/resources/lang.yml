@@ -1,0 +1,34 @@
+KOTH:
+  CONTROLLING: "&6[KingOfTheHill] &c%player% &ehas started controlling the &9Koth&e. &7(%time%)"
+  ATTEMPTING: "&6[KingOfTheHill] &eAttempting to control &9Koth&e. &7(%time%)"
+  KNOCKED: "&6[KingOfTheHill] &c%player% &ehas lost control of &9Koth&e. &7(%time%)"
+  DECREASED: "&6[KingOfTheHill] &9Koth &etime has been decreased. &7(05:00)"
+  CONTROLLED: "&6[KingOfTheHill] &9Koth &ehas been controlled by &6[&r%team%&6] &r%player%&e."
+
+TITLE:
+  VILLAGER_KILLED:
+    TITLE:
+      COMBAT_SHOP: "&cCombat Villager Killed"
+      BUILD_SHOP: "&cBuild Villager Killed"
+      SELL_SHOP: "&cSell Villager Killed"
+    SUB_TITLE:
+      COMBAT_SHOP: "Spawning in 3 minutes"
+      BUILD_SHOP: "Spawning in 3 minutes"
+      SELL_SHOP: "Spawning in 3 minutes"
+
+MATCH:
+  JOIN:
+    SUCCESSFULLY: "&7%player% &ehas joined (&b%size%&e/&b20&e)"
+    FULL: "&cThis match is full."
+    ALREADY_STARTED: "&cThis match has already started."
+    ALREADY_IN_THE_MATCH: "&cYou are already in this match."
+    ALREADY_ON_MATCH: "&cYou are already in a match."
+    NOT_IN_LOBBY: "&cYou must be in the lobby to join a match!"
+  LEAVE:
+    SUCCESSFULLY: "&7%player% &ehas leaved (&b%size%&e/&b20&e)"
+    NOT_IN_THIS_MATCH: "&cYou are not in this match."
+    NOT_IN_MATCH: "&cYou are not in a match."
+    IN_LOBBY: "&cYou are in the lobby, cannot leave."
+  SPECTATE:
+    JOIN_FOR_PLAYERS: "&7%player% is now spectating your match."
+    JOIN_FOR_SPECTATORS: "&7%player% is now spectating this match."

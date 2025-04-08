@@ -1,0 +1,53 @@
+TITLE: "Matches"
+
+BUTTONS:
+  WAITING:
+    TITLE: "&6&l%match_name%"
+    LORE:
+      - ""
+      - "&eStatus: &6Waiting"
+      - "&ePlayers: &f%size%&7/&f20"
+      - ""
+      - "&6Click to join!"
+    ITEM: "STAINED_CLAY"
+    DATA: 5
+  STARTING:
+    TITLE: "&6&l%match_name%"
+    LORE:
+      - ""
+      - "&eStatus: &aStarting"
+      - "&ePlayers: &f%size%&7/&f20"
+      - ""
+      - "&6Click to join!"
+    ITEM: "STAINED_CLAY"
+    DATA: 4
+  PLAYING:
+    TITLE: "&6&l%match_name%"
+    LORE:
+      - ""
+      - "&eStatus: &cIn-Game"
+      - "&ePlayers: &f%size%&7/&f20"
+      - ""
+      - "&6Click to spectate!"
+    ITEM: "STAINED_CLAY"
+    DATA: 14
+  ENDING:
+    TITLE: "&6&l%match_name%"
+    LORE:
+      - ""
+      - "&eStatus: &4Ending"
+      - "&ePlayers: &f%size%&7/&f20"
+      - ""
+      - "&6Click to queue for next match!"
+    ITEM: "STAINED_CLAY"
+    DATA: 7
+  RESTARTING:
+    TITLE: "&6&l%match_name%"
+    LORE:
+      - ""
+      - "&eStatus: &4Restarting"
+      - "&ePlayers: &f%size%&7/&f20"
+      - ""
+      - "&6Click to queue for next match!"
+    ITEM: "STAINED_CLAY"
+    DATA: 7

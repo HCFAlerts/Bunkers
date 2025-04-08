@@ -1,0 +1,38 @@
+TEAM:
+  TITLE: "Teleport Selection"
+  BUTTONS:
+    RED:
+      TITLE: "&c&lRed Team"
+      LORE:
+        - "&eClick to view"
+        - "&cRed Team&e players"
+      ITEM: "WOOL"
+      DATA: 14
+    BLUE:
+      TITLE: "&9&lBlue Team"
+      LORE:
+        - "&eClick to view"
+        - "&9Blue Team&e players"
+      ITEM: "WOOL"
+      DATA: 11
+    YELLOW:
+      TITLE: "&e&lYellow Team"
+      LORE:
+        - "&eClick to view"
+        - "&6Yellow Team&e players"
+      ITEM: "WOOL"
+      DATA: 4
+    GREEN:
+      TITLE: "&a&lGreen Team"
+      LORE:
+        - "&eClick to view"
+        - "&aGreen Team&e players"
+      ITEM: "WOOL"
+      DATA: 13
+
+PLAYER:
+  TITLE: "Teleport Selection"
+  PLAYER_BUTTON:
+    TITLE: "&f%player%"
+    LORE:
+      - "&eClick to teleport"
