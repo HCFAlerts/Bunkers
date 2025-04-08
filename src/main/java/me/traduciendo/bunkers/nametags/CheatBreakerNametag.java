@@ -34,14 +34,14 @@ public class CheatBreakerNametag implements Listener {
         PlayerData playerData = plugin.getPlayerManager().getPlayerData(player);
         PlayerState state = playerData.getPlayerState();
 
-        String line1 = "";
+        //String line1 = "";
         String line2 = "";
 
         switch (state) {
             case LOBBY:
             case WAITING:
                 int playerPing = getPing(player);
-                line1 = "&f" + player.getName();
+                //line1 = "&f" + player.getName();
                 line2 = "&7Ping: &f" + playerPing + "ms";
                 break;
 
@@ -50,7 +50,7 @@ public class CheatBreakerNametag implements Listener {
                 Team team = plugin.getTeamManager().getByPlayer(player, match);
 
                 if (match != null && team != null) {
-                    line1 = TeamColor.getChatColor(playerData.getCurrentTeamColor()) + player.getName();
+                    //line1 = TeamColor.getChatColor(playerData.getCurrentTeamColor()) + player.getName();
 
                     double dtr = team.getDTR();
 
@@ -69,34 +69,35 @@ public class CheatBreakerNametag implements Listener {
 
                     line2 = "&6[" + TeamColor.getChatColor(playerData.getCurrentTeamColor()) + playerData.getCurrentTeamColor().name() + " &7┃ " + dtrColor + team.getDTR() + "&6]";
                 } else {
-                    line1 = "&c" + player.getName();
+                    //line1 = "&c" + player.getName();
                     line2 = "&6[&cNone &7┃ &e0.0&6]";
                 }
                 break;
 
             case SPECTATING:
-                line2 = "&7" + player.getName();
-                line1 = "&7[Spectator]";
+                //line1 = "&7" + player.getName();
+                line2 = "&7[Spectator]";
                 break;
 
             default:
                 playerPing = getPing(player);
-                line1 = "&f" + player.getName();
+                //line1 = "&f" + player.getName();
                 line2 = "&7Ping: &f" + playerPing + "ms";
                 break;
         }
 
-        applyNametag(player, CC.translate(line1), CC.translate(line2));
+        // CC.translate(line1)
+        applyNametag(player, CC.translate(line2));
     }
 
-    private void applyNametag(Player player, String line1, String line2) {
+    private void applyNametag(Player player, String line2) {
         UUID playerId = player.getUniqueId();
 
         List<String> lines = new ArrayList<>();
 
-        if (!line1.isEmpty()) {
-            lines.add(line1);
-        }
+//        if (!line1.isEmpty()) {
+//            lines.add(line1);
+//        }
         if (!line2.isEmpty()) {
             lines.add(line2);
         }
@@ -105,7 +106,7 @@ public class CheatBreakerNametag implements Listener {
 //                .lines(lines)
 //                .build();
 
-        lines.add(CC.translate(line1));
+//        lines.add(CC.translate(line1));
         lines.add(CC.translate(line2));
 
         CBPacketOverrideNametags packet = new CBPacketOverrideNametags(playerId, lines);
