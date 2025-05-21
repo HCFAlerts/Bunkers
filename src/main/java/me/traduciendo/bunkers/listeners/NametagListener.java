@@ -22,15 +22,12 @@ import java.util.List;
 import java.util.Optional;
 
 public class NametagListener implements Listener {
-    private final Bunkers plugin;
-    private final NametagModule nametagModule;
-
-    public NametagListener(Bunkers plugin) {
-        this.plugin = plugin;
-        this.nametagModule = Apollo.getModuleManager().getModule(NametagModule.class);
-    }
+    private NametagModule nametagModule;
+    Bunkers plugin = Bunkers.getInstance();
 
     public void updateNametag(Player player) {
+        this.nametagModule = Apollo.getModuleManager().getModule(NametagModule.class);
+
         PlayerData playerData = plugin.getPlayerManager().getPlayerData(player);
         PlayerState state = playerData.getPlayerState();
 

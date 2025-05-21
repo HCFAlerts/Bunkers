@@ -152,7 +152,7 @@ public class PlayerListener implements Listener {
                     event.setCancelled(true);
                     player.sendMessage(CC.RED + "You cannot interact with blocks here.");
                 } else if (teamBlock != teamPlayer) {
-                    if (teamBlock.getDTR()<=0) {
+                    if (teamBlock.getDTR() <= 0.0) {
                         event.setCancelled(true);
                         player.sendMessage(CC.RED + "You cannot interact with blocks here.");
                     }
@@ -233,14 +233,14 @@ public class PlayerListener implements Listener {
                     Team teamPlayer = plugin.getTeamManager().getByPlayer(event.getPlayer(), match);
                     Team teamBlock = plugin.getTeamManager().getByLocation(block.getLocation(),match);
 
+                    // TODO: wrong logic
                     if (teamBlock == null){
                         event.getPlayer().sendMessage(CC.RED + "You cannot break blocks here.");
                         event.setCancelled(true);
                     } else if (teamBlock != null){
                         if (teamBlock != teamPlayer){
                             if (match.getPlacedBlocks().contains(event.getBlock())){
-                                if (teamBlock.getDTR()<=0){
-
+                                if (teamBlock.getDTR()<=0.0) {
                                 } else {
                                     event.getPlayer().sendMessage(CC.RED + "You cannot break blocks here.");
                                     event.setCancelled(true);

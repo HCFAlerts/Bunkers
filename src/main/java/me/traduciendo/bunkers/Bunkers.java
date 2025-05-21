@@ -7,10 +7,7 @@ import me.traduciendo.bunkers.commands.BunkersCommand;
 import me.traduciendo.bunkers.commands.MatchCommand;
 import me.traduciendo.bunkers.commands.TeamCommand;
 import me.traduciendo.bunkers.holograms.PlaceholderManager;
-import me.traduciendo.bunkers.listeners.EntityListener;
-import me.traduciendo.bunkers.listeners.MatchListener;
-import me.traduciendo.bunkers.listeners.NametagListener;
-import me.traduciendo.bunkers.listeners.PlayerListener;
+import me.traduciendo.bunkers.listeners.*;
 import me.traduciendo.bunkers.managers.*;
 import me.traduciendo.bunkers.nametags.CheatBreakerNametag;
 import me.traduciendo.bunkers.providers.board.ScoreboardProvider;
@@ -23,7 +20,7 @@ import me.traduciendo.bunkers.utils.file.FileConfig;
 import me.traduciendo.bunkers.utils.menu.ButtonListener;
 import me.traduciendo.bunkers.waypoints.WaypointManager;
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -78,18 +75,28 @@ public final class Bunkers extends JavaPlugin {
         this.waypointManager = new WaypointManager(this);
         this.timerManager = new TimerManager(this);
 
-        Plugin lunarclientAPI = Bukkit.getPluginManager().getPlugin("LunarClient-API");
-        Plugin cheatbreakerAPI = Bukkit.getPluginManager().getPlugin("CheatBreakerAPI");
+//        Plugin lunarclientAPI = Bukkit.getPluginManager().getPlugin("LunarClient-API");
+//        Plugin cheatbreakerAPI = Bukkit.getPluginManager().getPlugin("CheatBreakerAPI");
+//
+//        if (lunarclientAPI != null) {
+//            NametagListener nametagListener = new NametagListener(this);
+//            getServer().getPluginManager().registerEvents(nametagListener, this);
+//            nametagListener.startNametagUpdateTask();
+//        }
+//        if (cheatbreakerAPI != null) {
+//            CheatBreakerNametag cheatBreakerNametag = new CheatBreakerNametag(this);
+//            getServer().getPluginManager().registerEvents(cheatBreakerNametag, this);
+//            cheatBreakerNametag.startNametagUpdateTask();
+//        }
 
-        if (lunarclientAPI != null) {
-            NametagListener nametagListener = new NametagListener(this);
-            getServer().getPluginManager().registerEvents(nametagListener, this);
-            nametagListener.startNametagUpdateTask();
+        PluginManager manager = this.getServer().getPluginManager();
+        if (Bukkit.getPluginManager().isPluginEnabled("LunarClient-API")) {
+            manager.registerEvents(new NametagListener(), this);
         }
-        if (cheatbreakerAPI != null) {
-            CheatBreakerNametag cheatBreakerNametag = new CheatBreakerNametag(this);
-            getServer().getPluginManager().registerEvents(cheatBreakerNametag, this);
-            cheatBreakerNametag.startNametagUpdateTask();
+        if (Bukkit.getPluginManager().isPluginEnabled("CheatBreakerAPI")) {
+            if (getConfig().getBoolean("NAMETAGS.CHEATBREAKER.ENABLED")) {
+                manager.registerEvents(new CBNametagListener(), this);
+            }
         }
 
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"gamerule randomTickSpeed 550");
